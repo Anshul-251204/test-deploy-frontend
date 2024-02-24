@@ -11,7 +11,7 @@ function App() {
 	useEffect(() => {
 		const fetchvalue = async () => {
 			const res = await axios.get(
-				"/api/g"
+				"https://test-deploy-b7zq.onrender.com/api/g"
 			);
 			console.log(res);
 			setCount(res.data);
@@ -20,9 +20,12 @@ function App() {
 	}, []);
 
 	const add = async () => {
-		const res = await axios.post("/api/p", {
-			input,
-		});
+		const res = await axios.post(
+			"https://test-deploy-b7zq.onrender.com/api/p",
+			{
+				input,
+			}
+		);
 
 		console.log(res);
 	};
